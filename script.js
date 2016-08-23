@@ -25,6 +25,10 @@ function newGame() {
 	for (var i = 0; i < buttons.length; i++) {
 		buttons[i].style.visibility = 'visible';
   	}
+  	while(player.name === "") {
+	player.name = prompt("Podaj swoje imie");
+	}
+  	
 
 }
 
@@ -38,13 +42,13 @@ function computerPick() {
   //random number between 0 and 3
   switch (Math.floor(Math.random()*3)) {
     case 0:
-    computer.pick = "Kamień";
+    computer.pick = "Rock";
     break;
     case 1:
-    computer.pick = "Papier";
+    computer.pick = "Paper";
     break;
     case 2:
-    computer.pick = "Scyzoryk";
+    computer.pick = "Scissors";
     break;
   }
 };
@@ -54,27 +58,27 @@ function checkResult() {
 	if (player.pick === computer.pick) {
 		gameResult = "Remis!"; 
 		}
-	else if (player.pick === "Kamień") { 
-		if (computer.pick === "Scyzoryk") { 
+	else if (player.pick === "Rock") { 
+		if (computer.pick === "Scissors") { 
 			player.score++; 
 			gameResult = "Wygrałeś!"; } 
-		else if (computer.pick === "Papier") { 
+		else if (computer.pick === "Paper") { 
 			computer.score++; 
 			gameResult = "Komputer Wygrał!"; }
 		}
-	else if (player.pick === "Papier") { 
-		if  (computer.pick === "Kamień") { 
+	else if (player.pick === "Paper") { 
+		if  (computer.pick === "Rock") { 
 			player.score++; 
 			gameResult = "Wygrałeś!"; }
-		else if (computer.pick === "Scyzoryk") { 
+		else if (computer.pick === "Scissors") { 
 			computer.score++; 
 			gameResult = "Komputer Wygrał!"; }
 		}
-	else if (player.pick === "Scyzoryk") { 
-		if  (computer.pick === "Papier") { 
+	else if (player.pick === "Scissors") { 
+		if  (computer.pick === "Paper") { 
 			player.score++;
 			gameResult = "Wygrałeś!"; }
-		else if (computer.pick === "Kamień") { 
+		else if (computer.pick === "Rock") { 
 			computer.score++; 
 			gameResult = "Komputer Wygrał!"; }
 		}
@@ -92,15 +96,13 @@ round++;
 	if (player.score > computer.score) {
     document.getElementById("roundResult").innerHTML = "Gratuluje Wygrałeś!";}
     else {
-    document.getElementById("roundResult").innerHTML = "Jesteś przegrany";}
+    document.getElementById("roundResult").innerHTML = "Jesteś przegrany!!!";}
 
   var buttons = document.getElementsByClassName("pick-button");
   for(var i = 0; i < buttons.length; i++) {
     buttons[i].style.visibility = 'hidden';
   }
 }
-
-
 }
 
 

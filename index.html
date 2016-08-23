@@ -3,48 +3,47 @@
 <head>
 	<meta charset="utf-8">
 	<title>gra js</title>
-	<script src="script.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 	
 </head>
 <body>
-	<section class="Welcome">
-		<button class="btn-btn-success" onclick="newGame()">Nowa Gra</button>
+	<section class="Welcome text-center">
+		<button class="btn btn-primary " onclick="newGame()">Nowa Gra</button>
 	</section>
-	<section class="Slogan">
+	<section class="Slogan text-center">
 		<p id="new">
-		<button class="btn btn-default pick-button" onclick="playerPick('Kamień')">Kamień<i class="fa fa-hand-rock-o"></i>i</button>
-		<button class="btn btn-default pick-button" onclick="playerPick('Papier')">Papier<i class="fa fa-hand-paper-o"></i>i</button>
-		<button class="btn btn-default pick-button" onclick="playerPick('Scyzoryk')">Scyzoryk<i class="fa fa-hand-scissors-o"></i>i</button>
+		<button class="btn btn-default pick-button"onclick="playerPick('Rock')">Kamień<i class="fa fa-hand-rock-o"></i></button>
+		<button class="btn btn-default pick-button"onclick="playerPick('Paper')">Papier<i class="fa fa-hand-paper-o"></i></button>
+		<button class="btn btn-default pick-button"onclick="playerPick('Scissors')">Scyzoryk<i class="fa fa-hand-scissors-o"></i></button>
 		<p id="roundResult"></p>
 	</section>
 	<section class="Current round">
-		<div>
-			<p>Runda <span id="round"></span></p>
+		<div class="text-center">
+			<p>Runda: <span id="round"></span></p>
 		</div>
 		<div>
-			<p>Komputer wybrał <span id="computerPick"></span></p>
-			<p>Ty wybrałeś <span id="playerPick"></span></p>
-			<p>Wynik <span id="gameResult"></span></p>
+			<p class="text-center">Komputer wybrał: <span id="computerPick"></span></p>
+			<p class="text-center">Ty wybrałeś: <span id="playerPick"></span></p>
+			<p class="text-center">Wynik: <span id="gameResult"></span></p>
 		</div>
 	</section>
-	<section class="Reslt">
+	<section class="Result">
 		<table class="table table-bordered table-striped"> 
 			<thead> 
 				<tr> 
 					<th colspan="2" class="text-center" id="gameResult">Wyniki</th> 
 				</tr> 
 				<tr> 
-					<th id="playerName" class="results">Gracz</th> 
-					<th class="results">Komputer</th> 
+					<th id="playerName" class="results text-center">Gracz</th> 
+					<th class="results text-center">Komputer</th> 
 				</tr> 
 			</thead> 
 			<tbody>
 				<tr> 
-					<td id="playerScore" >0</td> 
-					<td id="computerScore">0</td> 
+					<td id="playerScore" class="text-center" >0</td> 
+					<td id="computerScore" class="text-center">0</td> 
 				</tr>
 			</tbody> 
 		</table>

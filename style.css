@@ -1,3 +1,37 @@
 .pick-button{
   visibility: hidden;
 }
+.btn{
+	cursor:pointer;
+	font-size:40px;
+	margin:1px;	
+	border-radius:40px;
+	
+}
+.btn-primary{
+	background-color: black;
+}
+.Welcome{
+	margin: 40px 0 40px 0;
+}
+.Current{
+	border: 3px solid black;
+	border-radius: 30px;
+	width: 700px;
+	margin: auto;
+}
+.Current p{
+	font-size:25px;
+	text-transform: uppercase; 
+	
+}
+#round, #gameResult, #playerPick, #computerPick, #roundResult, .results, #playerScore, #computerScore{
+	font-size: 30px;
+	font-weight: bold;
+}
+.Result{
+	border-radius: 40px;
+	border:2px solid black;
+	width: 700px;
+	margin:  40px auto;
+}
