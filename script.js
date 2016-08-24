@@ -26,7 +26,7 @@ function newGame() {
 		buttons[i].style.visibility = 'visible';
   	}
   	while(player.name === "") {
-	player.name = prompt("Podaj swoje imie");
+		player.name = prompt("Podaj swoje imie");
 	}
   	
 
@@ -94,11 +94,12 @@ round++;
 
 	if ( (player.score >= 10) || (computer.score >=10) ) {
 	if (player.score > computer.score) {
-    document.getElementById("roundResult").innerHTML = "Gratuluje Wygrałeś!";}
+    	document.getElementById("roundResult").innerHTML = "Gratuluje Wygrałeś!";}
     else {
-    document.getElementById("roundResult").innerHTML = "Jesteś przegrany!!!";}
+    	document.getElementById("roundResult").innerHTML = "Jesteś przegrany!!!";}
 
   var buttons = document.getElementsByClassName("pick-button");
+  
   for(var i = 0; i < buttons.length; i++) {
     buttons[i].style.visibility = 'hidden';
   }
